@@ -54,7 +54,7 @@ if (!fs.existsSync(rutaLista)) {
   fs.writeFileSync(rutaLista, JSON.stringify([], null, 2));
   console.log("✅ Archivo listasubots.json creado.");
 } else {
-  console.log("📂 Archivo listasubots.json ya existe.");
+  console.log("✎ Archivo listasubots.json ya existe.");
 }
 //para los subot
 const prefixPath = path.resolve("prefixes.json");
@@ -105,7 +105,7 @@ function loadPrefix() {
     }
 }
 loadPrefix();
-console.log(`📌 Prefijo actual: ${global.prefix}`);
+console.log(`✎ Prefijo actual: ${global.prefix}`);
 
 const guarFilePath = "./guar.json";
 if (!fs.existsSync(guarFilePath)) fs.writeFileSync(guarFilePath, JSON.stringify({}, null, 2));
@@ -258,7 +258,7 @@ case 'play': {
 
   if (!text) {
     await sock.sendMessage(chatId, {
-      text: `✳️ Usa el comando correctamente:\n\n📌 Ejemplo: *${global.prefix}play* Bad Bunny - Yonaguni`
+      text: `✎ Usa el comando correctamente:\n\n Ejemplo: *${global.prefix}play* Bad Bunny - Yonaguni`
     }, { quoted: msg });
     break;
   }
@@ -279,30 +279,18 @@ case 'play': {
     const author = video.author.name;
     const thumbnail = video.thumbnail;
 
-    const info = `
-╔═════════════════╗
-║✦ 𝘼𝙕𝙐𝙍𝘼 𝙐𝗹𝗍𝗋𝗮 & 𝘾𝙤𝙧𝙩𝙖𝙣𝙖 ✦
-╚═════════════════╝
-📀 *𝙄𝗻𝗳𝗼 𝗱𝗲𝗹 𝘃𝗶𝗱𝗲𝗼:*  
-╭───────────────╮  
-├ 🎼 *Título:* ${title}
-├ ⏱️ *Duración:* ${duration}
-├ 👁️ *Vistas:* ${views}
-├ 👤 *Autor:* ${author}
-└ 🔗 *Link:* ${videoUrl}
-╰───────────────╯
-📥 *Opciones de Descargas si usas termux o estás en otros host que no sea Sky Ultra Plus:*  
-┣ 🎵 *Audio:* _${global.prefix}play5 boza hoy_
-┣ 🎥 *Video:* _${global.prefix}play6 boza hoy_
-┗ ⚠️ *¿No se reproduce?* Usa _${global.prefix}ff_
-═════════════════════  
-   𖥔 Azura Ultra & Cortana 𖥔
-═════════════════════
-✳️ *Para descargar desde este mensaje:*
-• Responde con *1* o *audio* para recibir la música.
-• Responde con *2* o *video* para recibir el video.
-• Responde con *3* o *musicadoc* para recibir música como documento.
-• Responde con *4* o *videodoc* para recibir el video como documento.
+    const info = `*「✦」 Título:* *${title}*
+
+> ✦ *Autor:* ${author}
+> ⴵ *Duración:* ${duration}
+> ✰ *Vistas:* ${views} 
+> 🜸 *Link:* ${videoUrl}
+
+> ✎ *Para descargar desde este mensaje:*
+>✿ Responde con *1* o *audio* para recibir la música.
+> ✿ Responde con *2* o *video* para recibir el video.
+> ✿ Responde con *3* o *musicadoc* para recibir música como documento.
+> ✿ Responde con *4* o *videodoc* para recibir el video como documento.
 `;
 
     const sent = await sock.sendMessage(chatId, {
@@ -333,7 +321,7 @@ case 'play2': {
 
   if (!text) {
     await sock.sendMessage(chatId, {
-      text: `✳️ Usa el comando correctamente:\n\n📌 Ejemplo: *${global.prefix}play2* Bad Bunny - Yonaguni`
+      text: `✎  Usa el comando correctamente:\n\n Ejemplo: *${global.prefix}play2* Bad Bunny - Yonaguni`
     }, { quoted: msg });
     break;
   }
@@ -354,30 +342,18 @@ case 'play2': {
     const author = video.author.name;
     const thumbnail = video.thumbnail;
 
-    const info = `
-╔═════════════════╗
-║✦ 𝘼𝙕𝙐𝙍𝘼 𝙐𝗹𝗍𝗋𝗮 & 𝘾𝙤𝙧𝙩𝙖𝙣𝙖 ✦
-╚═════════════════╝
-📀 *𝙄𝗻𝗳𝗼 𝗱𝗲𝗹 𝘃𝗶𝗱𝗲𝗼:*  
-╭───────────────╮  
-├ 🎼 *Título:* ${title}
-├ ⏱️ *Duración:* ${duration}
-├ 👁️ *Vistas:* ${views}
-├ 👤 *Autor:* ${author}
-└ 🔗 *Link:* ${videoUrl}
-╰───────────────╯
-📥 *Opciones de Descargas si usas termux o estás en otros host que no sea Sky Ultra Plus:*  
-┣ 🎵 *Audio:* _${global.prefix}play5 boza hoy_
-┣ 🎥 *Video:* _${global.prefix}play6 boza hoy_
-┗ ⚠️ *¿No se reproduce?* Usa _${global.prefix}ff_
-═════════════════════  
-   𖥔 Azura Ultra & Cortana 𖥔
-═════════════════════
-✳️ *Para descargar desde este mensaje:*
-• Responde con *1* o *audio* para recibir la música.
-• Responde con *2* o *video* para recibir el video.
-• Responde con *3* o *musicadoc* para recibir música como documento.
-• Responde con *4* o *videodoc* para recibir el video como documento.
+    const info = `*「✦」Título:* *${title}*
+
+> ✦ *Autor:* ${author}
+> ⴵ  *Duración:* ${duration}
+> ✰ *Vistas:* ${views}
+> 🜸  *Link:* ${videoUrl}
+
+✎ *Para descargar desde este mensaje:*
+> ✿ Responde con *1* o *audio* para recibir la música.
+> ✿ Responde con *2* o *video* para recibir el video.
+> ✿ Responde con *3* o *musicadoc* para recibir música como documento.
+> ✿ Responde con *4* o *videodoc* para recibir el video como documento.
 `;
 
     const sent = await sock.sendMessage(chatId, {
@@ -421,22 +397,22 @@ case "menuaudio": {
         let guarData = JSON.parse(fs.readFileSync("./guar.json", "utf-8"));
         
         let listaMensaje = `┏━━━━━━━━━━━━━━━┓
-┃  📂 *MENÚ DE MULTIMEDIA*  
-┃  🔑 *Palabras Clave Guardadas*  
+┃  ❏ *MENÚ DE MULTIMEDIA*  
+┃  ✎ *Palabras Clave Guardadas*  
 ┗━━━━━━━━━━━━━━━┛
 
-📌 *¿Cómo recuperar un archivo guardado?*  
+✎ *¿Cómo recuperar un archivo guardado?*  
 Usa el comando:  
-➡️ _${global.prefix}g palabra_clave_  
+➭ _${global.prefix}g palabra_clave_  
 ( *o puedes solo escribirlas tambien y bot las envia tambien* ) 
 
-📂 *Lista de palabras clave guardadas:*  
+❏ *Lista de palabras clave guardadas:*  
 ━━━━━━━━━━━━━━━━━━━\n`;
 
         let claves = Object.keys(guarData);
         
         if (claves.length === 0) {
-            listaMensaje += "🚫 *No hay palabras clave guardadas.*\n";
+            listaMensaje += "《✧》 *No hay palabras clave guardadas.*\n";
         } else {
             claves.forEach((clave, index) => {
                 listaMensaje += `*${index + 1}.* ${clave}\n`;
@@ -444,14 +420,11 @@ Usa el comando:
         }
 
         listaMensaje += `\n━━━━━━━━━━━━━━━━━━━  
-📥 *Otros Comandos de Multimedia*  
+✎ *Otros Comandos de Multimedia*  
 
 ${global.prefix}guar → Guarda archivos con una clave.  
 ${global.prefix}g → Recupera archivos guardados.  
-${global.prefix}kill → Elimina un archivo guardado.  
-
-💡 *Azura Ultra & Cortana sigue mejorando. Pronto más funciones.*  
-⚙️ *Desarrollado por Russell xz* 🚀`;
+${global.prefix}kill → Elimina un archivo guardado. `;
 
         // Enviar el menú con video como GIF
         await sock.sendMessage2(msg.key.remoteJid,
@@ -486,7 +459,7 @@ ${global.prefix}kill → Elimina un archivo guardado.
     // Enviar la imagen
     await sock.sendMessage(chatId, {
       image: { url: imageUrl },
-      caption: '💖 Aquí tienes tu Waifu NSFW 💖'
+      caption: '✿ Aquí tienes tu Waifu NSFW ✿'
     }, { quoted: msg });
 
     // Reacción de éxito
@@ -575,7 +548,7 @@ case "modoadmins": {
 
     if (!["on", "off"].includes(args[0])) {
       await sock.sendMessage(chatId, {
-        text: "✳️ Usa correctamente:\n\n.modoadmins on / off"
+        text: "✎ Usa correctamente:\n\n.modoadmins on / off"
       }, { quoted: msg });
       break;
     }
@@ -627,7 +600,7 @@ case "modoprivado": {
 
     if (!["on", "off"].includes(args[0])) {
       await sock.sendMessage(msg.key.remoteJid, {
-        text: "✳️ Usa correctamente:\n\n.modoprivado on / off"
+        text: "✎  Usa correctamente:\n\n.modoprivado on / off"
       }, { quoted: msg });
       break;
     }
@@ -643,7 +616,7 @@ case "modoprivado": {
     fs.writeFileSync(activosPath, JSON.stringify(activos, null, 2));
 
     await sock.sendMessage(msg.key.remoteJid, {
-      text: `🔐 Modo privado *${args[0] === "on" ? "activado" : "desactivado"}*.`
+      text: `✎ Modo privado *${args[0] === "on" ? "activado" : "desactivado"}*.`
     }, { quoted: msg });
 
   } catch (err) {
@@ -688,7 +661,7 @@ case "cargabots":
 
         if (!fs.existsSync(subbotFolder)) {
             await sock.sendMessage(msg.key.remoteJid, {
-                text: "⚠️ No hay carpeta de subbots."
+                text: "《✧》 No hay carpeta de subbots."
             }, { quoted: msg });
             return;
         }
@@ -699,7 +672,7 @@ case "cargabots":
 
         if (subDirs.length === 0) {
             await sock.sendMessage(msg.key.remoteJid, {
-                text: "⚠️ No hay subbots activos para verificar."
+                text: "《✧》 No hay subbots activos para verificar."
             }, { quoted: msg });
             return;
         }
@@ -845,7 +818,7 @@ case "qr": {
             const code = await socky.requestPairingCode(rid);
             await sock.sendMessage(msg.key.remoteJid, {
               video: { url: "https://cdn.russellxz.click/b0cbbbd3.mp4" },
-              caption: "🔐 *Código generado:*\nAbre WhatsApp > Vincular dispositivo y pega el siguiente código:",
+              caption: "➭ *Código generado:*\nAbre WhatsApp > Vincular dispositivo y pega el siguiente código:",
               gifPlayback: true
             }, { quoted: msg });
             await sleep(1000);
@@ -856,7 +829,7 @@ case "qr": {
             const qrImage = await QRCode.toBuffer(qr);
 await sock.sendMessage(msg.key.remoteJid, {
   image: qrImage,
-  caption: `📲 Escanea este código QR desde *WhatsApp > Vincular dispositivo* para conectarte como subbot.`
+  caption: `➭ Escanea este código QR desde *WhatsApp > Vincular dispositivo* para conectarte como subbot.`
 }, { quoted: msg });
           }
           sentCodeMessage = true;
@@ -865,45 +838,7 @@ await sock.sendMessage(msg.key.remoteJid, {
         switch (connection) {
           case "open":
             await sock.sendMessage(msg.key.remoteJid, {
-              text: `╭───〔 *🤖 SUBBOT CONECTADO* 〕───╮
-│
-│ ✅ *Bienvenido a Azura Ultra 2.0*
-│
-│ Ya eres parte del mejor sistema de juegos RPG
-│
-│ 🛠️ Usa los siguientes comandos para comenzar:
-│
-│ ${global.prefix}help
-│ ${global.prefix}menu
-│
-│ ⚔️ Disfruta de las funciones del subbot
-│ y conquista el mundo digital
-│
-│ ℹ️ Por defecto, el subbot está en *modo privado*,
-│ lo que significa que *solo tú puedes usarlo*.
-│
-│ Usa el comando:
-│ #menu
-│ (para ver configuraciones y cómo hacer
-│ que otras personas puedan usarlo.)
-│
-│ ➕ Los prefijos por defecto son: *. y #*
-│ Si quieres cambiarlos, usa:
-│ #setprefix
-│
-│ 🔄 Si notas que el subbot *no responde al instante*
-│ o tarda mucho *aunque esté conectado*, no te preocupes.
-│ Puede ser un fallo temporal.
-│
-│ En ese caso, simplemente ejecuta:
-│ #delbots
-│ para eliminar tu sesión y luego vuelve a conectarte usando:
-│ #serbot o para code si no quieres qr usa: #code o #sercode. 
-│ hasta que se conecte correctamente.
-│
-│ Esto ayuda a establecer una conexión *estable y funcional*.
-│
-╰────✦ *Sky Ultra Plus* ✦────╯`
+              text: `*genial gracias por ser parte de la. familia (づ￣ ³￣)づ ahora disfruta del bot*`
             }, { quoted: msg });
           //  await joinChannels(socky);
             await sock.sendMessage(msg.key.remoteJid, {
@@ -927,7 +862,7 @@ await sock.sendMessage(msg.key.remoteJid, {
               case DisconnectReason.badSession:
               case DisconnectReason.loggedOut:
                 await sock.sendMessage(msg.key.remoteJid, {
-                  text: `⚠️ *Sesión eliminada.*
+                  text: `《✧》 *Sesión eliminada.*
 ${messageError}
 Usa ${global.prefix}serbot para volver a conectar.`
                 }, { quoted: msg });
@@ -942,7 +877,7 @@ Usa ${global.prefix}serbot para volver a conectar.`
                   return;
                 }
                 await sock.sendMessage(msg.key.remoteJid, {
-                  text: `⚠️ *Reintentos de conexión fallidos.*`
+                  text: `《✧》 *Reintentos de conexión fallidos.*`
                 }, { quoted: msg });
                 break;
 
@@ -952,21 +887,7 @@ Usa ${global.prefix}serbot para volver a conectar.`
 
               default:
                 await sock.sendMessage(msg.key.remoteJid, {
-                  text: `╭───〔 *⚠️ SUBBOT* 〕───╮
-│
-│⚠️ *Problema de conexión detectado:*
-│ ${messageError}
-│ Intentando reconectar...
-│
-│ 🔄 Si seguir en problemas, En ese caso, simplemente ejecuta:
-│ #delbots
-│ para eliminar tu sesión y luego vuelve a conectarte usando:
-│ #serbot o para code si no quieres qr usa: #code o #sercode. 
-│ hasta que se conecte correctamente.
-│
-│ Esto ayuda a establecer una conexión *estable y funcional*.
-│
-╰────✦ *Sky Ultra Plus* ✦────╯`
+                  text: `⚠️ *Problema de conexión detectado:*`
                 }, { quoted: msg });
                 break;
             }
@@ -1004,7 +925,7 @@ case 'tovideo': {
   const quoted = msg.message?.extendedTextMessage?.contextInfo?.quotedMessage?.stickerMessage;
   if (!quoted) {
     await sock.sendMessage(msg.key.remoteJid, {
-      text: "⚠️ Responde a un sticker para convertirlo a video."
+      text:  Responde a un sticker para convertirlo a video."
     }, { quoted: msg });
     break;
   }
@@ -1095,7 +1016,7 @@ case 'tourl': {
     };
 
     if (!quotedMsg) {
-        await m.reply('⚠️ *Responde a una imagen, video, sticker, nota de voz o audio para subirlo.*');
+        await m.reply('《✧》 *Responde a una imagen, video, sticker, nota de voz o audio para subirlo.*');
         break;
     }
 
@@ -1141,7 +1062,7 @@ case 'tourl': {
         const maxSize = 200 * 1024 * 1024;
         if (stats.size > maxSize) {
             fs.unlinkSync(rawPath);
-            throw new Error('⚠️ El archivo excede el límite de 200MB.');
+            throw new Error('《✧》 El archivo excede el límite de 200MB.');
         }
 
         let finalPath = rawPath;
@@ -1186,7 +1107,7 @@ case 'tourl': {
 case 'carga': {
   if (!isOwner) {
     await sock.sendMessage(msg.key.remoteJid, {
-      text: "⛔ Este comando es solo para el Owner."
+      text: "《✧》Este comando es solo para el Owner."
     }, { quoted: msg });
     break;
   }
@@ -1248,7 +1169,7 @@ case 'play222': {
 
     if (!text) {
         await sock.sendMessage(msg.key.remoteJid, {
-            text: `✳️ Usa el comando correctamente:\n\n📌 Ejemplo: *${global.prefix}play2* La Factoría - Perdoname`
+            text: `✎ Usa el comando correctamente:\n\n Ejemplo: *${global.prefix}play2* La Factoría - Perdoname`
         }, { quoted: msg });
         break;
     }
@@ -1273,31 +1194,12 @@ case 'play222': {
         const videoLink = `https://www.youtube.com/watch?v=${videoInfo.id}`;
 
         // 2. BANNER: Enviamos la vista previa con la info
-        const captionPreview = `
-╔═════════════════╗
-║✦ 𝘼𝙕𝙐𝙍𝘼 𝙐𝗹𝗍𝗋𝗮 & 𝘾𝙤𝙧𝙩𝙖𝙣𝙖 ✦
-╚═════════════════╝
+        const captionPreview = `*「✦」Título:* *${title}*
 
-📀 *𝙄𝗻𝗳𝗼 𝗱𝗲𝗹 𝘃𝗶𝗱𝗲𝗼:*  
-╭───────────────╮  
-├ 🎼 *Título:* ${title}
-├ ⏱️ *Duración:* ${duration}
-├ 👁️ *Vistas:* ${views}
-├ 👤 *Autor:* ${author}
-└ 🔗 *Link:* ${videoLink}
-╰───────────────╯
-
-📥 *Opciones de Descarga:*  
-┣ 🎵 *Audio:* _${global.prefix}play1 ${text}_
-┣ 🎵 *Audio:* _${global.prefix}play5 ${text}_
-┣ 🎥 *Video:* _${global.prefix}play2 ${text}_
-┣ 🎥 *Video:* _${global.prefix}play6 ${text}_
-┗ ⚠️ *¿No se reproduce?* Usa _${global.prefix}ff_
-
-⏳ *Procesado por Azura Ultra & Cortana Bot*
-═════════════════════  
-   𖥔 Azura Ultra & Cortana 𖥔
-═════════════════════`;
+> ✦ *Autor:* ${author}
+> ⴵ *Duración:* ${duration}
+> ✰ *Vistas:* ${views}
+> 🜸   *Link:* ${videoLink}`;
         
         await sock.sendMessage(msg.key.remoteJid, {
             image: { url: thumbnail },
@@ -1347,7 +1249,7 @@ case 'play222': {
             throw new Error('El video descargado está vacío o incompleto');
         }
 
-        const finalText = `🎬 Aquí tiene su video.\n\nDisfrútelo y continúe explorando el mundo digital.\n\n© Azura Ultra & Cortana`;
+        const finalText = `✎  Aquí tiene su video (っ'-')╮=͟͟͞͞💌`;
 
         await sock.sendMessage(msg.key.remoteJid, {
             video: fs.readFileSync(filePath),
@@ -1394,7 +1296,7 @@ case 'whatmusic': {
     const quotedMsg = msg.message?.extendedTextMessage?.contextInfo?.quotedMessage;
     if (!quotedMsg || (!quotedMsg.audioMessage && !quotedMsg.videoMessage)) {
         await sock.sendMessage(msg.key.remoteJid, {
-            text: "✳️ Responde a un *audio* (MP3) o *video* (MP4) para identificar la canción."
+            text: "✎  Responde a un *audio* (MP3) o *video* (MP4) para identificar la canción."
         }, { quoted: msg });
         break;
     }
@@ -1438,26 +1340,16 @@ case 'whatmusic': {
         const views = video.views.toLocaleString();
         const channel = video.author.name || 'Desconocido';
 
-        const banner = `
-╔══════════════════╗
-║  ✦ 𝘼𝙕𝙐𝙍𝘼 𝙐𝙇𝙏𝙍𝘼 𝟮.𝟬 𝗕𝗢𝗧 ✦
-╚══════════════════╝
+        const banner = ` *「✦」Título:* *${title}*
 
-🎵 *Canción detectada:*  
-╭───────────────╮  
-├ 📌 *Título:* ${title}
-├ 👤 *Artista:* ${artist}
-├ 💿 *Álbum:* ${album}
-├ 📅 *Lanzamiento:* ${release}
-├ 🔎 *Buscando:* ${video.title}
-├ ⏱️ *Duración:* ${fduration}
-├ 👁️ *Vistas:* ${views}
-├ 📺 *Canal:* ${channel}
-├ 🔗 *Link:* ${videoUrl}
-╰───────────────╯
-
-⏳ *Espere un momento, descargando la canción...*
-═════════════════════`;
+> ✦  *Artista:* ${artist}
+> ❍  *Álbum:* ${album}
+> ✿  *Lanzamiento:* ${release}
+> ✧  *Buscando:* ${video.title}
+>  ⴵ  *Duración:* ${fduration}
+> ✰  *Vistas:* ${views}
+> ✐  *Canal:* ${channel}
+>  🜸 *Link:* ${videoUrl}`;
 
         await sock.sendMessage(msg.key.remoteJid, {
             image: { url: thumbnail },
@@ -1532,7 +1424,7 @@ case 'whatmusic6': {
 
     if (!quotedMsg || (!quotedMsg.audioMessage && !quotedMsg.videoMessage)) {
         await sock.sendMessage(msg.key.remoteJid, {
-            text: "✳️ Responde a una nota de voz, audio o video para identificar la canción."
+            text: "✎  Responde a una nota de voz, audio o video para identificar la canción."
         }, { quoted: msg });
         break;
     }
@@ -1580,25 +1472,16 @@ case 'whatmusic6': {
         const video = ytSearch.videos[0];
         if (!video) throw new Error("No se encontró la canción en YouTube");
 
-        const banner = `
-╔══════════════════╗
-║ ✦ 𝘼𝙕𝙐𝙍𝘼 𝙐𝙇𝙏𝙍𝘼 𝟮.𝟬 𝗕𝗢𝗧 ✦
-╚══════════════════╝
+        const banner = `*「✦」Título:* ${title}
 
-🎵 *Canción detectada:*  
-╭───────────────╮  
-├ 📌 *Título:* ${title}
-├ 👤 *Artista:* ${artist}
-├ 💿 *Álbum:* ${album}
-├ 📅 *Lanzamiento:* ${release}
-├ 🔎 *Buscando:* ${video.title}
-├ ⏱️ *Duración:* ${video.timestamp}
-├ 👁️ *Vistas:* ${video.views.toLocaleString()}
-├ 📺 *Canal:* ${video.author.name}
-├ 🔗 *Link:* ${video.url}
-╰───────────────╯
-
-⏳ *Espere un momento, descargando la canción...*`;
+> ✦ *Artista:* ${artist}
+> ❍ *Álbum:* ${album}
+> ✿  *Lanzamiento:* ${release}
+> ✧  *Buscando:* ${video.title}
+>  ⴵ  *Duración:* ${video.timestamp}
+> ✰  *Vistas:* ${video.views.toLocaleString()}
+> ✎  *Canal:* ${video.author.name}
+> 🜸  *Link:* ${video.url}`;
 
         await sock.sendMessage(msg.key.remoteJid, {
             image: { url: video.thumbnail },
@@ -1669,7 +1552,7 @@ case 'ff2': {
 
     if (!audioMsg && !isAudioDoc) {
         await sock.sendMessage(msg.key.remoteJid, {
-            text: `✳️ Responde a un *audio* o *mp3 dañado* para repararlo.`
+            text: `✎  Responde a un *audio* o *mp3 dañado* para repararlo.`
         }, { quoted: msg });
         break;
     }
@@ -1744,7 +1627,7 @@ case 'tag': {
 
     // Verificar que se use en un grupo
     if (!chatId.endsWith("@g.us")) {
-      await sock.sendMessage(chatId, { text: "⚠️ Este comando solo se puede usar en grupos." }, { quoted: msg });
+      await sock.sendMessage(chatId, { text: "《✧》 Este comando solo se puede usar en grupos." }, { quoted: msg });
       return;
     }
 
@@ -1756,7 +1639,7 @@ case 'tag': {
 
     if (!isAdmin && !isBot) {
       return await sock.sendMessage(chatId, {
-        text: "❌ Solo los administradores del grupo o el bot pueden usar este comando."
+        text: "《✧》 Solo los administradores del grupo o el bot pueden usar este comando."
       }, { quoted: msg });
     }
 
@@ -1816,7 +1699,7 @@ case 'tag': {
     }
 
     if (!messageToForward) {
-      await sock.sendMessage(chatId, { text: "⚠️ Debes responder a un mensaje o proporcionar un texto para reenviar." }, { quoted: msg });
+      await sock.sendMessage(chatId, { text: "《✧》Debes responder a un mensaje o proporcionar un texto para reenviar." }, { quoted: msg });
       return;
     }
 
@@ -1842,14 +1725,14 @@ case 'linia': {
 
     if (!isOwner) {
         await sock.sendMessage(msg.key.remoteJid, {
-            text: '⛔ Este comando es solo para el *Owner*.'
+            text: '《✧》 Este comando es solo para el *Owner*.'
         }, { quoted: msg });
         break;
     }
 
     if (!text) {
         await sock.sendMessage(msg.key.remoteJid, {
-            text: `✳️ Usa el comando correctamente:\n\n📌 Ejemplo: *${global.prefix}linia play*`
+            text: `✎ Usa el comando correctamente:\n\n Ejemplo: *${global.prefix}linia play*`
         }, { quoted: msg });
         break;
     }
@@ -1899,7 +1782,7 @@ case 'linia': {
     const quotedMsg = msg.message?.extendedTextMessage?.contextInfo?.quotedMessage;
     if (!quotedMsg || !quotedMsg.videoMessage) {
         await sock.sendMessage(msg.key.remoteJid, {
-            text: `✳️ Responde a un *video* para optimizarlo para WhatsApp.`
+            text: `✎ Responde a un *video* para optimizarlo para WhatsApp.`
         }, { quoted: msg });
         break;
     }
@@ -1976,7 +1859,7 @@ case "git": {
         // Verificar que el comando solo lo use el owner
         if (!isOwner(sender)) {
             await sock.sendMessage(msg.key.remoteJid, {
-                text: "⚠️ *Solo el propietario puede usar este comando.*"
+                text: "《✧》 *Solo el propietario puede usar este comando.*"
             }, { quoted: msg });
             return;
         }
@@ -1984,7 +1867,7 @@ case "git": {
         // Verificar si se proporcionó un comando
         if (!args[0]) {
             await sock.sendMessage(msg.key.remoteJid, {
-                text: "⚠️ *Debes especificar el nombre de un comando.*\nEjemplo: `.git rest`"
+                text: "✎ *Debes especificar el nombre de un comando.*\nEjemplo: `.git rest`"
             }, { quoted: msg });
             return;
         }
@@ -2014,7 +1897,7 @@ case "git": {
         }
 
         // Extraer el código del comando
-        const commandCode = `📜 *Código del comando ${commandName}:*\n\n\`\`\`${match[0]}\`\`\``;
+        const commandCode = `✿ *Código del comando ${commandName}:*\n\n\`\`\`${match[0]}\`\`\``;
 
         // Enviar el código como mensaje
         await sock.sendMessage(msg.key.remoteJid, {
@@ -2157,7 +2040,7 @@ case 'ytmp4': {
 
     if (!text || (!text.includes('youtube.com') && !text.includes('youtu.be'))) {
         await sock.sendMessage(msg.key.remoteJid, {
-            text: `✳️ Usa el comando correctamente:\n\n📌 Ejemplo: *${global.prefix}ytmp4* https://youtube.com/watch?v=...`
+            text: `✎ Usa el comando correctamente:\n\n Ejemplo: *${global.prefix}ytmp4* https://youtube.com/watch?v=...`
         }, { quoted: msg });
         break;
     }
@@ -2266,7 +2149,7 @@ case 'ytmp4': {
 
     if (!args.length) {
         await sock.sendMessage(msg.key.remoteJid, { 
-            text: `⚠️ *Uso incorrecto.*\n📌 Ejemplo: \`${global.prefix}tiktoksearch <query>\`` 
+            text: `《✧》  *Uso incorrecto.*\n Ejemplo: \`${global.prefix}tiktoksearch <query>\`` 
         }, { quoted: msg });
         return;
     }
@@ -2290,13 +2173,13 @@ case 'ytmp4': {
         const results = response.data.data.slice(0, 5);
 
         const resultText = results.map((video, index) => `
-📌 *Resultado ${index + 1}:*
-📹 *Título:* ${video.title}
-👤 *Autor:* ${video.author.nickname} (@${video.author.username})
-👀 *Reproducciones:* ${video.play.toLocaleString()}
-❤️ *Me gusta:* ${video.like.toLocaleString()}
-💬 *Comentarios:* ${video.coment.toLocaleString()}
-🔗 *Enlace:* ${video.url}
+➮ *Resultado ${index + 1}:*
+> ✦  *Título:* ${video.title}
+> ✎ *Autor:* ${video.author.nickname} (@${video.author.username})
+> ⌦ *Reproducciones:* ${video.play.toLocaleString()}
+> ᰔᩚ  *Me gusta:* ${video.like.toLocaleString()}
+> ❏  *Comentarios:* ${video.coment.toLocaleString()}
+> 🜸   *Enlace:* ${video.url}
         `).join('\n');
 
         await sock.sendMessage(msg.key.remoteJid, { 
@@ -2324,7 +2207,7 @@ case 'ytmp4': {
 
     if (!args.length) {
         await sock.sendMessage(msg.key.remoteJid, { 
-            text: `⚠️ *Uso incorrecto.*\n📌 Ejemplo: \`${global.prefix}dalle Gato en la luna\`` 
+            text: `《✧》  *Uso incorrecto.*\n Ejemplo: \`${global.prefix}dalle Gato en la luna\`` 
         }, { quoted: msg });
         return;
     }
@@ -2347,7 +2230,7 @@ case 'ytmp4': {
 
         await sock.sendMessage(msg.key.remoteJid, { 
             image: imageBuffer,
-            caption: `🖼️ *Imagen generada para:* ${text}`,
+            caption: `「✦」 *Imagen generada para:* ${text}`,
             mimetype: 'image/jpeg'
         }, { quoted: msg });
 
@@ -3036,7 +2919,7 @@ case 'copiarpg': {
         // Verificar si es owner
         if (!isOwner(sender)) {
             return sock.sendMessage(msg.key.remoteJid, {
-                text: "⛔ *Solo el propietario del bot puede usar este comando.*"
+                text: "《✧》  *Solo el propietario del bot puede usar este comando.*"
             }, { quoted: msg });
         }
 
@@ -3116,7 +2999,7 @@ case 'robar': {
 
     if (!targetId) {
       return sock.sendMessage(msg.key.remoteJid, {
-        text: `⚠️ *Debes citar o mencionar al usuario que deseas robar.*\n📌 Ejemplo: \`${global.prefix}robar @usuario\``
+        text: `✎ *Debes citar o mencionar al usuario que deseas robar.*\n📌 Ejemplo: \`${global.prefix}robar @usuario\``
       }, { quoted: msg });
     }
 
@@ -4111,9 +3994,7 @@ case 'allmenu': {
         let totalComandos = commands.length;
 
         // Construir menú
-        let commandList = `╔════════════════════╗  
-║  𝘼𝙕𝙐𝙍𝘼 𝙐𝙇𝙏𝙍𝘼 & 𝘾𝙊𝙍𝙏𝘼𝙉𝘼  ║  
-╚════════════════════╝  
+        let commandList = ` 
         📜 *Menú Completo*  
 ━━━━━━━━━━━━━━━━━━━  
 📌 𝗧𝗢𝗧𝗔𝗟 𝗗𝗘 𝗖𝗢𝗠𝗔𝗡𝗗𝗢𝗦: ${totalComandos}  
@@ -4126,17 +4007,13 @@ case 'allmenu': {
             commandList += `➫ *${global.prefix}${cmd}*\n`;
         });
 
-        commandList += `━━━━━━━━━━━━━━━━━━━  
-👨‍💻 𝘿𝙚𝙨𝙖𝙧𝙧𝙤𝙡𝙡𝙖𝙙𝙤 𝙥𝙤𝙧 𝙍𝙪𝙨𝙨𝙚𝙡𝙡 𝙓𝙕  
-╭────────────────╮  
-│ 𝘼𝙕𝙐𝙍𝘼 𝙐𝙇𝙏𝙍𝘼 & 𝘾𝙊𝙍𝙏𝘼𝙉𝘼 │  
-╰────────────────╯`;
+        commandList += `━━━━━━━━━━━━━━━━━━━  `;
 
         // Enviar usando sendMessage2
         await sock.sendMessage2(
   chatId,
   {
-    image: { url: "https://cdn.dorratz.com/files/1744666819010.jpg" }, 
+    image: { url: "https://cdn.russellxz.click/70109295.jpeg" }, 
     caption: commandList 
   },
   msg 
@@ -4158,9 +4035,7 @@ case 'menuowner': {
     });
 
     const chatId = msg.key.remoteJid;
-    const captionText = `╔═══════════════╗  
-║     𝘼𝙕𝙐𝙍𝘼 𝙐𝙇𝙏𝙍𝘼 & 𝘾𝙊𝙍𝙏𝘼𝙉𝘼    ║  
-╚═══════════════╝  
+    const captionText = ` 
 
             𝐌𝐄𝐍𝐔 𝐎𝐖𝐍𝐄𝐑  
 ━━━━━━━━━━━━━━━━━━━━  
@@ -4192,11 +4067,7 @@ case 'menuowner': {
 ➠ ${global.prefix}apagar
 ➠ ${global.prefix}prender
 
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯  
-
-      𝗗𝗲𝘀𝗮𝗿𝗿𝗼𝗹𝗹𝗮𝗱𝗼 𝗽𝗼𝗿: ʳᵘˢˢᵉˡˡ ˣᶻ  
-
-         𝙖𝙯𝙪𝙧𝙖 𝙪𝙡𝙩𝙧𝙖 & 𝘾𝙤𝙧𝙩𝙖𝙣𝙖`;
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯  `;
 
     const videoResponse = await axios.get(
       "https://cdn.dorratz.com/files/1741471185939.mp4",
@@ -4206,7 +4077,7 @@ case 'menuowner': {
 await sock.sendMessage2(
   chatId,
   {
-    image: { url: "https://cdn.dorratz.com/files/1744667309694.jpg" }, 
+    image: { url: "https://cdn.russellxz.click/70109295.jpeg" }, 
     caption: captionText 
   },
   msg 
@@ -4229,9 +4100,7 @@ case 'menurpg': {
     });
 
     const chatId = msg.key.remoteJid;
-    const menuText = `╔═════════════════╗  
-║   𝘼𝙕𝙐𝙍𝘼 𝙐𝙇𝙏𝙍𝘼 & 𝘾𝙊𝙍𝙏𝘼𝙉𝘼 ║  
-╚═════════════════╝  
+    const menuText = ` 
 
 ✦ 𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐈𝐃𝐎 𝐀𝐋 𝐌𝐄𝐍𝐔 𝐑𝐏𝐆 ✦  
 ━━━━━━━━━━━━━━━━━━  
@@ -4286,12 +4155,7 @@ Así te registras
 ➤ ${global.prefix}topuser ➤ ${global.prefix}topmascotas  
 ➤ ${global.prefix}topper  
 
-━━━━━━━━━━━━━━━━━━  
-𝗗𝗘𝗦𝗔𝗥𝗥𝗢𝗟𝗟𝗔𝗗𝗢 𝗣𝗢𝗥: russell xz  
-
-╭────────────────╮  
-│ 𝘼𝙕𝙐𝙍𝘼 𝙐𝙇𝙏𝙍𝘼 & 𝘾𝙊𝙍𝙏𝘼𝙉𝘼 │  
-╰────────────────╯`;
+━━━━━━━━━━━━━━━━━━ `;
 
     const videoUrl = "https://cdn.dorratz.com/files/1741474416069.mp4";
     const videoBuffer = (await axios.get(videoUrl, { responseType: 'arraybuffer' })).data;
@@ -4299,7 +4163,7 @@ Así te registras
 await sock.sendMessage2(
   chatId,
   {
-    image: { url: "https://cdn.dorratz.com/files/1744667713683.jpg" }, 
+    image: { url: "https://cdn.russellxz.click/70109295.jpeg" }, 
     caption: menuText
   },
   msg 
@@ -4319,178 +4183,138 @@ case 'menu': {
   try {
     // Reacción inicial (se mantiene sendMessage normal)
     await sock.sendMessage(msg.key.remoteJid, {
-      react: { text: "📜", key: msg.key }
+      react: { text: "🍁", key: msg.key }
     });
 
     const chatId = msg.key.remoteJid;
-    const captionText = `╔═══════════════╗  
-║ 𝐀𝐙𝐔𝐑𝐀 𝐔𝐋𝐓𝐑𝐀 & 𝐂𝐎𝐑𝐓𝐀𝐍𝐀  ║  
-║   🤖 𝘼𝙎𝙄𝙎𝙏𝙀𝙉𝙏𝙀 🤖   ║  
-╚═══════════════╝  
+    const captionText = `> *✿ bienvenidos al menú de sumi sakurasawa (づ￣ ³￣)づ*
+>  #✎ 𝗣𝗿𝗲𝗳𝗶𝗷𝗼 𝗔𝗰𝘁𝘂𝗮𝗹: 『${global.prefix}』  
+>  #✎ 𝗨𝘀𝗮 『${global.prefix}』 𝗮𝗻𝘁𝗲𝘀 𝗱𝗲 𝗰𝗮𝗱𝗮 𝗰𝗼𝗺𝗮𝗻𝗱𝗼.  
+  
+  ✐; *✿*→ ᴘᴀʀᴀ ᴄʀᴇᴀʀ ᴜɴ sᴜʙ-ʙᴏᴛ ᴄᴏɴ ᴛᴜ ɴᴜᴍᴇʀᴏ ᴜᴛɪʟɪᴢᴀ *#qr* o *#code*
 
-╭──────────────╮  
-│ ✦ 𝙈𝙀𝙉𝙐 𝙂𝙀𝙉𝙀𝙍𝘼𝙇 ✦ │  
-╰──────────────╯  
+>  #✎ ${global.prefix}serbot / ${global.prefix}jadibot
+> # ✎ ${global.prefix}sercode / ${global.prefix}code
+> # ✎ ${global.prefix}delbots
+> ° mas comandos en el menu de subbots...
 
-⎔ 𝗣𝗿𝗲𝗳𝗶𝗷𝗼 𝗔𝗰𝘁𝘂𝗮𝗹: 『${global.prefix}』  
-⎔ 𝗨𝘀𝗮 『${global.prefix}』 𝗮𝗻𝘁𝗲𝘀 𝗱𝗲 𝗰𝗮𝗱𝗮 𝗰𝗼𝗺𝗮𝗻𝗱𝗼.  
+➮    ᥫ᭡informacion de la bot ✿
 
-╭──────────────╮  
-│ ✦ 𝗨𝗡𝗘𝗧𝗘 𝗔 𝗡𝗨𝗘𝗦𝗧𝗥𝗢 𝗦𝗜𝗦𝗧𝗘𝗠𝗔 𝗗𝗘 𝗦𝗨𝗕𝗕𝗢𝗧𝗦(𝗛𝗔𝗭𝗧𝗘 𝗕𝗢𝗧) ✦ │  
-╰──────────────╯  
+✎ ${global.prefix}speedtest  
+✎ ${global.prefix}ping  
+✎ ${global.prefix}creador    
+> saber la velecidad del bot y ver número del creador   
 
-👾 *Hazte subbot en nuestro sistema, te voy a mostrar la lista de comandos para gestiónar/hacerte subbot: 
+➮     ᥫ᭡ventas ✿
+  
+#✎  ${global.prefix}setstock
+#✎ ${global.prefix}stock
+#✎ ${global.prefix}setnetflix
+#✎ ${global.prefix}netflix
+#✎ ${global.prefix}setpago
+#✎ ${global.prefix}pago
+#✎ ${global.prefix}setcombos
+#✎ ${global.prefix}setreglas
+#✎ ${global.prefix}reglas
+#✎ ${global.prefix}combos
+#✎ ${global.prefix}sorteo
 
-⎔ ${global.prefix}serbot / ${global.prefix}jadibot
-⎔ ${global.prefix}sercode / ${global.prefix}code
-⎔ ${global.prefix}delbots
-° mas comandos en el menu de subbots...
+ ➮    ᥫ᭡ IA BOT ✿
+  
+#✎ ${global.prefix}gemini  
+#✎ ${global.prefix}chatgpt
+#✎ ${global.prefix}dalle
+#✎ ${global.prefix}visión 
+#✎ ${global.prefix}simi
+#✎ ${global.prefix}visión2
+#✎ ${global.prefix}chat on o off
+#✎ ${global.prefix}lumi on o off
+#✎ ${global.prefix}luminai
 
-╭──────────────╮  
-│ ✦ 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝘾𝙄𝙊𝙉 ✦ │  
-╰──────────────╯
-
-⎔ ${global.prefix}speedtest  
-⎔ ${global.prefix}ping  
-⎔ ${global.prefix}creador    
-
-╭──────────────╮  
-│ ✦ 𝙈𝙀𝙉𝙐𝙎 𝘿𝙄𝙎𝙋𝙊𝙉𝙄𝘽𝙇𝙀𝙎 ✦ │  
-╰──────────────╯  
-⎔ ${global.prefix}allmenu  
-⎔ ${global.prefix}menugrupo  
-⎔ ${global.prefix}menuaudio  
-⎔ ${global.prefix}menurpg  
-⎔ ${global.prefix}info  
-⎔ ${global.prefix}menuowner  
-
-╭──────────────╮  
-│ ✦ PARA VENTAS ✦ │  
-╰──────────────╯  
-⎔ ${global.prefix}setstock
-⎔ ${global.prefix}stock
-⎔ ${global.prefix}setnetflix
-⎔ ${global.prefix}netflix
-⎔ ${global.prefix}setpago
-⎔ ${global.prefix}pago
-⎔ ${global.prefix}setcombos
-⎔ ${global.prefix}setreglas
-⎔ ${global.prefix}reglas
-⎔ ${global.prefix}combos
-⎔ ${global.prefix}sorteo
-
-╭──────────────╮  
-│ ✦ 𝙄𝘼 - 𝘾𝙃𝘼𝙏 𝘽𝙊𝙏 ✦ │  
-╰──────────────╯  
-⎔ ${global.prefix}gemini  
-⎔ ${global.prefix}chatgpt
-⎔ ${global.prefix}dalle
-⎔ ${global.prefix}visión 
-⎔ ${global.prefix}simi
-⎔ ${global.prefix}visión2
-⎔ ${global.prefix}chat on o off
-⎔ ${global.prefix}lumi on o off
-⎔ ${global.prefix}luminai
-
-╭──────────────╮  
-│ ✦ 𝘿𝙀𝙎𝘾𝘼𝙍𝙂𝘼 ✦ │  
-╰──────────────╯  
-⎔ ${global.prefix}play → título  
-⎔ ${global.prefix}playdoc → título  
-⎔ ${global.prefix}play1 → título  
-⎔ ${global.prefix}play2 → título  
-⎔ ${global.prefix}play2doc → título  
-⎔ ${global.prefix}play3 spotify → titulo
-⎔ ${global.prefix}play5 → titulo
-⎔ ${global.prefix}play6 → titulo
-⎔ ${global.prefix}ytmp3 → link  
-⎔ ${global.prefix}ytmp3doc → link
-⎔ ${global.prefix}ytmp35 → link  
-⎔ ${global.prefix}get → responder a un estado.
-⎔ ${global.prefix}ytmp4 → link  
-⎔ ${global.prefix}ytmp4doc → link  
-⎔ ${global.prefix}ytmp45 → link  
-⎔ ${global.prefix}tiktok → link  
-⎔ ${global.prefix}fb → link  
-⎔ ${global.prefix}ig → link  
-⎔ ${global.prefix}spotify → link
-⎔ ${global.prefix}mediafire → link
-⎔ ${global.prefix}apk → título
-
-╭──────────────╮  
-│ ✦ 𝘽𝙐𝙎𝘾𝘼𝘿𝙊𝙍𝙀𝙎  ✦ │  
-╰──────────────╯  
-
-⎔ ${global.prefix}pixai → titulo
-⎔ ${global.prefix}Tiktoksearch → título
-⎔ ${global.prefix}Yts → título
-⎔ ${global.prefix}tiktokstalk → usuario
-
-╭──────────────╮  
-│ ✦ 𝘾𝙊𝙉𝙑𝙀𝙍𝙏𝙄𝘿𝙊𝙍𝙀𝙎 ✦ │  
-╰──────────────╯ 
+ ➮      ᥫ᭡DESCARGAS  ✿
+  
+#✎ ${global.prefix}play → título  
+#✎ ${global.prefix}playdoc → título  
+#✎ ${global.prefix}play1 → título  
+#✎ ${global.prefix}play2 → título  
+#✎ ${global.prefix}play2doc → título  
+#✎ ${global.prefix}play3 spotify → titulo
+#✎ ${global.prefix}play5 → titulo
+#✎ ${global.prefix}play6 → titulo
+#✎ ${global.prefix}ytmp3 → link  
+#✎ ${global.prefix}ytmp3doc → link
+#✎ ${global.prefix}ytmp35 → link  
+#✎ ${global.prefix}get → responder a un estado.
+#✎ ${global.prefix}ytmp4 → link  
+#✎ ${global.prefix}ytmp4doc → link  
+#✎ ${global.prefix}ytmp45 → link  
+#✎ ${global.prefix}tiktok → link  
+#✎ ${global.prefix}fb → link  
+#✎ ${global.prefix}ig → link  
+#✎ ${global.prefix}spotify → link
+#✎ ${global.prefix}mediafire → link
+#✎ ${global.prefix}apk → título
+>  ✿ todo lo que es descagas 
  
-⎔ ${global.prefix}tomp3  
-⎔ ${global.prefix}tts  
-⎔ ${global.prefix}tovideo
-⎔ ${global.prefix}toimg
-⎔ ${global.prefix}gifvideo → responde a un video.
-⎔ ${global.prefix}ff
-⎔ ${global.prefix}ff2
+➮    ᥫ᭡BUSCADORES ✿
 
-╭──────────────╮  
-│ ✦ 𝙎𝙏𝙄𝘾𝙆𝙀𝙍𝙎 ✦ │  
-╰──────────────╯  
+#✎ ${global.prefix}pixai → titulo
+#✎ ${global.prefix}Tiktoksearch → título
+#✎ ${global.prefix}Yts → título
+#✎ ${global.prefix}tiktokstalk → usuario
 
-⎔ ${global.prefix}s
-⎔ ${global.prefix}newpack
-⎔ ${global.prefix}addsticker
-⎔ ${global.prefix}listpacks
-⎔ ${global.prefix}sendpack
-⎔ ${global.prefix}qc
-⎔ ${global.prefix}qc2
-⎔ ${global.prefix}texto
+➮    ᥫ᭡CONVERTIDORES ✿
+ 
+#✎ ${global.prefix}tomp3  
+#✎ ${global.prefix}tts  
+#✎ ${global.prefix}tovideo
+#✎ ${global.prefix}toimg
+#✎ ${global.prefix}gifvideo → responde a un video.
+#✎ ${global.prefix}ff
+#✎ ${global.prefix}ff2
+> ✿ convertidores de audio o video. 
 
-╭──────────────╮  
-│ ✦ 𝙃𝙀𝙍𝙍𝘼𝙈𝙄𝙀𝙉𝙏𝘼𝙎 ✦ │  
-╰──────────────╯  
+➮    ᥫ᭡STICKER ✿
 
-⎔ ${global.prefix}ver → responder a un mensaje  
-⎔ ${global.prefix}tourl → responder a una imagen/video/musica
-⎔ ${global.prefix}whatmusic → Responder a un audio(mp3)/video(mp4)
-⎔ ${global.prefix}perfil 
-⎔ ${global.prefix}get
-⎔ ${global.prefix}xxx
-⎔ ${global.prefix}carga
-⎔ ${global.prefix}addco
-⎔ ${global.prefix}delco
+#✎ ${global.prefix}s
+#✎ ${global.prefix}newpack
+#✎ ${global.prefix}addsticker
+#✎ ${global.prefix}listpacks
+#✎ ${global.prefix}sendpack
+#✎ ${global.prefix}qc
+#✎ ${global.prefix}qc2
+#✎ ${global.prefix}texto
+> ✿ covertidor de sticker. 
 
-╭──────────────╮  
-│ ✦ 𝙈𝙄𝙉𝙄 𝙅𝙐𝙀𝙂𝙊𝙎 ✦ │  
-╰──────────────╯  
-⎔ ${global.prefix}verdad  
-⎔ ${global.prefix}reto  
-⎔ ${global.prefix}personalidad  
-⎔ ${global.prefix}ship  
-⎔ ${global.prefix}parejas  
-⎔ ${global.prefix}menurpg
+➮     ᥫ᭡HERRQMIENTAS ✿
 
-╭──────────────╮  
-│ ✦ COMANDO +18 ✦ │  
-╰──────────────╯  
-⎔ ${global.prefix}videoxxx
-⎔ ${global.prefix}pornololi
-⎔ ${global.prefix}nsfwneko
-⎔ ${global.prefix}Nsfwwaifu
-⎔ ${global.prefix}Waifu
-⎔ ${global.prefix}Neko
+#✎ ${global.prefix}ver → responder a un mensaje  
+#✎ ${global.prefix}tourl → responder a una imagen/video/musica
+#✎ ${global.prefix}whatmusic → Responder a un audio(mp3)/video(mp4)
+#✎ ${global.prefix}perfil 
+#✎ ${global.prefix}get
+#✎ ${global.prefix}xxx
+#✎ ${global.prefix}carga
+#✎ ${global.prefix}addco
+#✎ ${global.prefix}delco
 
-╭─────────────────╮  
- ✦ 𝘼𝙕𝙐𝙍𝘼 𝙐𝙇𝙏𝙍𝘼 & 𝘾𝙊𝙍𝙏𝘼𝙉𝘼 𝙀𝙎𝙏Á 𝙀𝙉 𝘾𝙊𝙉𝙎𝙏𝘼𝙉𝙏𝙀 𝘿𝙀𝙎𝘼𝙍𝙍𝙊𝙇𝙇𝙊. 
-  𝙎𝙀 𝘼𝙂𝙍𝙀𝙂𝘼𝙍Á𝙉 𝙈Á𝙎 𝙁𝙐𝙉𝘾𝙄𝙊𝙉𝙀𝙎 𝙋𝙍𝙊𝙉𝙏𝙊.   
-╰─────────────────╯  
+➮     ᥫ᭡JUEGOS ✿
+  
+#✎ ${global.prefix}verdad  
+#✎ ${global.prefix}reto  
+#✎ ${global.prefix}personalidad  
+#✎ ${global.prefix}ship  
+#✎ ${global.prefix}parejas  
+#✎ ${global.prefix}menurpg
 
-👨‍💻 𝘿𝙚𝙨𝙖𝙧𝙧𝙤𝙡𝙡𝙖𝙙𝙤 𝙥𝙤𝙧 𝙍𝙪𝙨𝙨𝙚𝙡𝙡 𝙓𝙕`;
+➮   ᥫ᭡NSFW +18 ✿
+  
+#✎ ${global.prefix}videoxxx
+#✎ ${global.prefix}pornololi
+#✎ ${global.prefix}nsfwneko
+#✎ ${global.prefix}Nsfwwaifu
+#✎ ${global.prefix}Waifu
+#✎ ${global.prefix}Neko`;
 
     // Enviar usando sendMessage2
     await sock.sendMessage2(
@@ -4519,12 +4343,9 @@ case 'menugrupo': {
     });
 
     const chatId = msg.key.remoteJid;
-    const captionText = `╔══════════════════╗  
-║  𝐀𝐙𝐔𝐑𝐀 𝐔𝐋𝐓𝐑𝐀 &  𝐂𝐎𝐑𝐓𝐀𝐍𝐀   ║  
-║   🎭 𝙼𝙴𝙽𝚄 𝙳𝙴 𝙶ℝ𝚄𝙿𝙾 🎭   ║  
-╚══════════════════╝  
+    const captionText = `  
 
-🛠 𝐂𝐎𝐍𝐅𝐈𝐆𝐔𝐑𝐀𝐂𝐈Ó𝐍  
+✎ 𝐂𝐎𝐍𝐅𝐈𝐆𝐔𝐑𝐀𝐂𝐈Ó𝐍  
 ╭✦ ${global.prefix}setinfo  
 ├✦ ${global.prefix}infogrupo
 ├✦ ${global.prefix}setname  
@@ -4540,7 +4361,7 @@ case 'menugrupo': {
 ├✦ ${global.prefix}modocaliente on/off
 ╰────────────────
 
-🔱 𝐀𝐃𝐌𝐈𝐍𝐈𝐒𝐓𝐑𝐀𝐂𝐈Ó𝐍  
+✎ 𝐀𝐃𝐌𝐈𝐍𝐈𝐒𝐓𝐑𝐀𝐂𝐈Ó𝐍  
 ╭✦ ${global.prefix}daradmins  
 ├✦ ${global.prefix}quitaradmins  
 ├✦ ${global.prefix}tag  
@@ -4563,7 +4384,7 @@ case 'menugrupo': {
 ├✦ ${global.prefix}abrirgrupo  
 ╰✦ ${global.prefix}cerrargrupo  
 
-🛡 𝐒𝐄𝐆𝐔𝐑𝐈𝐃𝐀𝐃  
+✎ 𝐒𝐄𝐆𝐔𝐑𝐈𝐃𝐀𝐃  
 ╭✦ ${global.prefix}antilink on/off  
 ├✦ ${global.prefix}antiarabe on/off  
 ├✦ ${global.prefix}antis on/off  
@@ -4571,9 +4392,7 @@ case 'menugrupo': {
 ├✦ ${global.prefix}kick  
 ╰✦ ${global.prefix}add
 
-📌 𝐌Á𝐒 𝐂𝐎𝐌𝐀𝐍𝐃𝐎𝐒 𝐏𝐑Ó𝐗𝐈𝐌𝐀𝐌𝐄𝐍𝐓𝐄...
-
-⟢ 𝐀𝐙𝐔𝐑𝐀 𝐔𝐋𝐓𝐑𝐀 & 𝐂𝐎𝐑𝐓𝐀𝐍𝐀 ⟣`;
+✎ 𝐌Á𝐒 𝐂𝐎𝐌𝐀𝐍𝐃𝐎𝐒 𝐏𝐑Ó𝐗𝐈𝐌𝐀𝐌𝐄𝐍𝐓𝐄...`;
 
     const videoResponse = await axios.get("https://cdn.dorratz.com/files/1741471817068.mp4", { 
       responseType: 'arraybuffer' 
@@ -4582,7 +4401,7 @@ case 'menugrupo': {
     await sock.sendMessage2(
   chatId,
   {
-    image: { url: "https://cdn.dorratz.com/files/1744666186448.jpg" }, 
+    image: { url: "https://cdn.russellxz.click/70109295.jpeg" }, 
     caption: captionText 
   },
   msg
@@ -6145,7 +5964,7 @@ case 'picar': {
     // Enviar mensaje de recompensa
     const textos = [
       `⛏️ *${usuario.nombre} trabajó arduamente picando piedras en la cantera.*\n💎 *${diamantesGanados} diamantes obtenidos*\n✨ *${xpGanado} XP ganados*`,
-      `💎 *Tras una larga jornada, ${usuario.nombre} encontró gemas valiosas entre las rocas.*\n💎 *${diamantesGanados} diamantes obtenidos*\n✨ *${xpGanado} XP ganados*`,
+      `?? *Tras una larga jornada, ${usuario.nombre} encontró gemas valiosas entre las rocas.*\n💎 *${diamantesGanados} diamantes obtenidos*\n✨ *${xpGanado} XP ganados*`,
       `🪨 *Piedra tras piedra, ${usuario.nombre} logró extraer un buen botín.*\n💎 *${diamantesGanados} diamantes obtenidos*\n✨ *${xpGanado} XP ganados*`,
       `🔨 *Golpeando con su pico, ${usuario.nombre} descubrió minerales ocultos.*\n💎 *${diamantesGanados} diamantes obtenidos*\n✨ *${xpGanado} XP ganados*`,
       `⛰️ *Explorando la cantera, ${usuario.nombre} halló una veta de diamantes.*\n💎 *${diamantesGanados} diamantes obtenidos*\n✨ *${xpGanado} XP ganados*`,
@@ -8879,7 +8698,7 @@ case 'otrouniverso': {
             personaje.rango = rangosPersonaje.reduce((acc, curr) => (personaje.nivel >= curr.nivel ? curr.rango : acc), personaje.rango);
 
             await sock.sendMessage(msg.key.remoteJid, { 
-                text: `🎉 *¡${personaje.nombre} ha subido al nivel ${personaje.nivel}! 🏆*\n🏅 *Nuevo Rango:* ${personaje.rango}`
+                text: `🎉 *¡${personaje.nombre} ha subido al nivel ${personaje.nivel}! 🏆*\n?? *Nuevo Rango:* ${personaje.rango}`
             }, { quoted: msg });
         }
 
@@ -10335,7 +10154,7 @@ case 'cazar': {
             { nivel: 10, rango: "🐾 Aprendiz" },
             { nivel: 20, rango: "🦴 Experto" },
             { nivel: 30, rango: "🛡️ Guardián" },
-            { nivel: 40, rango: "🐺 Alfa" },
+            { nivel: 40, rango: "?? Alfa" },
             { nivel: 50, rango: "🏆 Leyenda" },
             { nivel: 60, rango: "🔥 Divino" },
             { nivel: 70, rango: "🐉 Mítico" },
