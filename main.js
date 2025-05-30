@@ -286,8 +286,8 @@ case 'play': {
 > ✰ *Vistas:* ${views} 
 > 🜸 *Link:* ${videoUrl}
 
-> ✎ *Para descargar desde este mensaje:*
->✿ Responde con *1* o *audio* para recibir la música.
+ ✎ *Para descargar desde este mensaje:*
+> ✿ Responde con *1* o *audio* para recibir la música.
 > ✿ Responde con *2* o *video* para recibir el video.
 > ✿ Responde con *3* o *musicadoc* para recibir música como documento.
 > ✿ Responde con *4* o *videodoc* para recibir el video como documento.
@@ -2754,11 +2754,7 @@ case 'play6': {
                 .save(finalPath);
         });
 
-        const finalText = `🎬 Aquí tiene su video en calidad ${quality}p.
-
-Disfrútelo y continúe explorando el mundo digital.
-
-© Azura Ultra 2.0 Bot`;
+        const finalText = `✎ Aquí tiene su video(っ'-')╮=͟͟͞͞💌 `;
 
         await sock.sendMessage(msg.key.remoteJid, {
             video: fs.readFileSync(finalPath),
@@ -3680,7 +3676,7 @@ case 'totalper': {
       for (let user in rpgData.usuarios) {
         if (rpgData.usuarios[user].personajes && Array.isArray(rpgData.usuarios[user].personajes)) {
           totalUsers += rpgData.usuarios[user].personajes.length;
-        }
+        yo
       }
     }
     
@@ -4188,12 +4184,12 @@ case 'menu': {
 
     const chatId = msg.key.remoteJid;
     const captionText = `> *✿ bienvenidos al menú de sumi sakurasawa (づ￣ ³￣)づ*
->  #✎ 𝗣𝗿𝗲𝗳𝗶𝗷𝗼 𝗔𝗰𝘁𝘂𝗮𝗹: 『${global.prefix}』  
->  #✎ 𝗨𝘀𝗮 『${global.prefix}』 𝗮𝗻𝘁𝗲𝘀 𝗱𝗲 𝗰𝗮𝗱𝗮 𝗰𝗼𝗺𝗮𝗻𝗱𝗼.  
+> #✎ 𝗣𝗿𝗲𝗳𝗶𝗷𝗼 𝗔𝗰𝘁𝘂𝗮𝗹: 『${global.prefix}』  
+> #✎ 𝗨𝘀𝗮 『${global.prefix}』 𝗮𝗻𝘁𝗲𝘀 𝗱𝗲 𝗰𝗮𝗱𝗮 𝗰𝗼𝗺𝗮𝗻𝗱𝗼.  
   
   ✐; *✿*→ ᴘᴀʀᴀ ᴄʀᴇᴀʀ ᴜɴ sᴜʙ-ʙᴏᴛ ᴄᴏɴ ᴛᴜ ɴᴜᴍᴇʀᴏ ᴜᴛɪʟɪᴢᴀ *#qr* o *#code*
 
->  #✎ ${global.prefix}serbot / ${global.prefix}jadibot
+> #✎ ${global.prefix}serbot / ${global.prefix}jadibot
 > # ✎ ${global.prefix}sercode / ${global.prefix}code
 > # ✎ ${global.prefix}delbots
 > ° mas comandos en el menu de subbots...
@@ -4254,7 +4250,7 @@ case 'menu': {
 #✎ ${global.prefix}spotify → link
 #✎ ${global.prefix}mediafire → link
 #✎ ${global.prefix}apk → título
->  ✿ todo lo que es descagas 
+> ✿ todo lo que es descagas 
  
 ➮    ᥫ᭡BUSCADORES ✿
 
@@ -4320,7 +4316,7 @@ case 'menu': {
     await sock.sendMessage2(
   chatId,
   {
-    image: { url: "https://cdn.dorratz.com/files/1744672917987.jpg" }, 
+    image: { url: "https://cdn.russellxz.click/8c5933bf.jpeg" }, 
     caption: captionText 
   },
   msg 
@@ -13894,7 +13890,7 @@ case "s":
     try {
         let quoted = msg.message.extendedTextMessage?.contextInfo?.quotedMessage;
         if (!quoted) {
-        const xds = `👾 *Uso correcto:*\nResponde a una imagen/video con "${global.prefix}s" para convertirlo en sticker\n\nEjemplo: Responde a una foto con ${global.prefix}s`
+        const xds = `《✧》 Por favor, envía una imagen o video para hacer un sticker.`
             await sock.sendMessage(msg.key.remoteJid, {  // <- Mensaje directo normal
                 text: xds
             }, { quoted: msg });
