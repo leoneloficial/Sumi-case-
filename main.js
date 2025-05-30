@@ -925,7 +925,7 @@ case 'tovideo': {
   const quoted = msg.message?.extendedTextMessage?.contextInfo?.quotedMessage?.stickerMessage;
   if (!quoted) {
     await sock.sendMessage(msg.key.remoteJid, {
-      text:  Responde a un sticker para convertirlo a video."
+      text:  "Responde a un sticker para convertirlo a video."
     }, { quoted: msg });
     break;
   }
